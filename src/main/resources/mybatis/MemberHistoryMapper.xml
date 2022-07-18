@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zerobase.fastlms.admin.mapper.MemberHistoryMapper">
+    <select id="memberHistoryList" resultType="com.zerobase.fastlms.admin.dto.MemberHistoryDto">
+        select mh.* from member_history mh where mh.user_id = #{userId} order by mh.id desc;
+    </select>
+</mapper>
